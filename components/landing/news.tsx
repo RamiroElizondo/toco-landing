@@ -16,7 +16,7 @@ const products = [
     id: 1,
     title: "Cilindro San Valentín",
     description: "Un elegante cilindro de terciopelo rojo con lazo dorado, repleto de chocolates premium y rosas frescas. El regalo perfecto para sorprender a esa persona especial.",
-    image: "/products/cilindro-sanvalentin.jpg",
+    image: "/products/cilindro-sanvalentin.png",
     price: "$49.99",
     tags: ["Edición Limitada", "Más vendido"],
   },
@@ -24,7 +24,7 @@ const products = [
     id: 2,
     title: "Caja Romántica Premium",
     description: "Lujosa caja cuadrada con acabados dorados que revela una selección exclusiva de chocolates artesanales, pétalos de rosa y sorpresas románticas. Un detalle inolvidable.",
-    image: "/products/caja-sanvalentin.jpg",
+    image: "/products/caja-sanvalentin.png",
     price: "$69.99",
     tags: ["Edición Limitada", "Enamorados"],
   },
@@ -35,7 +35,7 @@ const news = [
     id: 1,
     title: "Nuevo Producto: Cilindro San Valentín",
     description: "Un elegante cilindro de terciopelo rojo con lazo dorado, repleto de chocolates premium y rosas frescas. El regalo perfecto para sorprender a esa persona especial.",
-    image: "/products/cilindro-sanvalentin.jpg",
+    image: "/products/cilindro-sanvalentin.png",
     date: "2023-02-14",
     tag: "Edición Limitada",
     featured: false,
@@ -45,7 +45,7 @@ const news = [
     id: 2,
     title: "Novedad: Caja Romántica Premium",
     description: "Lujosa caja cuadrada con acabados dorados que revela una selección exclusiva de chocolates artesanales, pétalos de rosa y sorpresas románticas. Un detalle inolvidable.",
-    image: "/products/caja-sanvalentin.jpg",
+    image: "/products/caja-sanvalentin.png",
     date: "2023-02-14",
     tag: "Más Vendido",
     featured: false,
@@ -126,12 +126,12 @@ export function News() {
               onMouseLeave={handleCardMouseLeave}
             >
               {/* Product Image */}
-              <div className="relative aspect-square overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src={product.image || "/placeholder.svg"}
                   alt={product.title}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="object-contain group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent" />
                 <div className="absolute top-4 right-4 flex gap-2">

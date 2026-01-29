@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
@@ -62,7 +63,8 @@ export function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
             <Button 
             className="bg-primary text-primary-foreground hover:bg-primary/90"
             onClick={() => window.open('https://www.google.com/maps/place/TOCO/@-31.5402312,-68.5279695,841m/data=!3m1!1e3!4m6!3m5!1s0x9681413d54b82b1d:0xfd05485bcff3b2e8!8m2!3d-31.5402312!4d-68.5258486!16s%2Fg%2F11y08ccg_q?entry=ttu&g_ep=EgoyMDI2MDEyNy4wIKXMDSoASAFQAw%3D%3D', '_blank')}

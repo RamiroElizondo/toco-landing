@@ -72,6 +72,14 @@ export function Offers() {
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Próximamente badge */}
+        <div className="absolute top-6 right-6 z-20">
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">
+            Próximamente
+          </span>
+        </div>
+        
+        <div className="opacity-60 blur-sm pointer-events-none">
         {/* Section header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <Badge variant="outline" className="mb-4 border-primary/30 text-primary">
@@ -144,6 +152,7 @@ export function Offers() {
             Ver todas las ofertas
             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Button>
+        </div>
         </div>
       </div>
     </section>

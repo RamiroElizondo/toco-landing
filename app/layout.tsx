@@ -2,6 +2,7 @@ import React from "react"
 import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
@@ -35,9 +36,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
