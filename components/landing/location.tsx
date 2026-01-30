@@ -151,9 +151,9 @@ export function Location() {
                     <div className="p-2 rounded-lg bg-primary/10">
                       <Mail className="w-5 h-5 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-xs text-muted-foreground">Email</p>
-                      <a href={`mailto:${storeInfo.email}`} className="text-foreground font-medium hover:text-primary transition-colors">
+                      <a href={`mailto:${storeInfo.email}`} className="text-foreground font-medium hover:text-primary transition-colors text-sm break-all">
                         {storeInfo.email}
                       </a>
                     </div>

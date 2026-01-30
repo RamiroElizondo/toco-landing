@@ -1,10 +1,11 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Facebook, Instagram, Twitter, Youtube, Linkedin, ArrowRight, Heart } from "lucide-react"
+import { Facebook, Instagram, Twitter, Youtube, Linkedin, ArrowRight, Heart, Check } from "lucide-react"
 
 const socialLinks = [
   { icon: Instagram, href: "https://www.instagram.com/tocopickandgo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", label: "Instagram" },
@@ -32,6 +33,37 @@ const footerLinks = {
 }
 
 export function Footer() {
+  const [email, setEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    try {
+      const formData = new FormData()
+      formData.append("q3_email", email)
+
+      await fetch("https://submit.jotform.com/submit/260287217608056", {
+        method: "POST",
+        body: formData,
+      })
+
+      setIsSuccess(true)
+      setEmail("")
+      
+      // Reset success message after 3 seconds
+      setTimeout(() => {
+        setIsSuccess(false)
+      }, 3000)
+    } catch (error) {
+      console.error("Error al suscribirse:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <footer className="bg-card border-t border-border">
       {/* Newsletter Section */}
@@ -44,15 +76,36 @@ export function Footer() {
             <p className="text-muted-foreground mb-6">
               Suscríbete para recibir las últimas novedades, ofertas exclusivas y actualizaciones.
             </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form 
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+            >
               <Input
                 type="email"
+                name="q3_email"
                 placeholder="tu@email.com"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={isSubmitting || isSuccess}
                 className="bg-background border-border focus:border-primary"
               />
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 group">
-                Suscribir
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <Button 
+                type="submit" 
+                disabled={isSubmitting || isSuccess}
+                className="bg-primary text-primary-foreground hover:bg-primary/90 group disabled:opacity-50"
+              >
+                {isSuccess ? (
+                  <>
+                    <Check className="mr-2 w-4 h-4" />
+                    ¡Suscrito!
+                  </>
+                ) : (
+                  <>
+                    Suscribir
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </Button>
             </form>
           </div>
