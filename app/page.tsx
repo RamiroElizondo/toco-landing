@@ -15,7 +15,7 @@ export default function Home() {
       <News />
       <About />
       <Features />
-      <Offers />
+      {/*<Offers />*/}
       <Location />
       <Footer />
     </main>
