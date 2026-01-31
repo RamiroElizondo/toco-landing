@@ -5,9 +5,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Facebook, Instagram, Twitter, Youtube, Linkedin, ArrowRight, Heart, Check } from "lucide-react"
+import { Facebook, Instagram, Twitter, Youtube, Linkedin, ArrowRight, Heart, Check, type LucideIcon } from "lucide-react"
 
-const socialLinks = [
+const socialLinks: Array<
+  | { icon: LucideIcon; href: string; label: string }
+  | { imageSrc: string; href: string; label: string }
+> = [
   { icon: Instagram, href: "https://www.instagram.com/tocopickandgo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", label: "Instagram" },
   { imageSrc: "/icons/tiktok.png", href: "https://www.tiktok.com/@toco.pickgo?is_from_webapp=1&sender_device=pc", label: "TikTok" },
 ]
@@ -170,7 +173,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Links - Soporte */}
+          {/* Links - Soporte 
           <div>
             <h4 className="font-semibold text-foreground mb-4">Soporte</h4>
             <ul className="space-y-3">
@@ -186,8 +189,8 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Links - Legal */}
+          */}
+          {/* Links - Legal 
           <div>
             <h4 className="font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-3">
@@ -203,6 +206,18 @@ export function Footer() {
               ))}
             </ul>
           </div>
+          */}
+
+          {/* Big logo right */}
+          <div className="col-span-2 md:col-span-2 lg:col-span-3 flex justify-center lg:justify-end items-center">
+            <Image
+              src="/logo.png"
+              alt="TOCO"
+              width={360}
+              height={144}
+              className="w-44 sm:w-52 md:w-64 lg:w-72 h-auto opacity-90"
+            />
+          </div>
         </div>
       </div>
 
@@ -214,7 +229,7 @@ export function Footer() {
               © {new Date().getFullYear()} TOCO. Todos los derechos reservados.
             </p>
             <p className="text-muted-foreground text-sm flex items-center gap-1">
-              Hecho con <Heart className="w-4 h-4 text-primary fill-primary" /> en San Juan, PR
+              Hecho con <Heart className="w-4 h-4 text-primary fill-primary" /> en San Juan, AR
             </p>
           </div>
         </div>

@@ -17,7 +17,7 @@ const products = [
     title: "Cilindro San Valentín",
     description: "Un elegante cilindro rojo con lazo dorado, repleto de chocolates. El regalo perfecto para sorprender a esa persona especial.",
     image: "/products/cilindro-sanvalentin.png",
-    price: "$16.000",
+    price: "$16.500",
     tags: ["Edición Limitada", "Más vendido"],
   },
   {
@@ -25,7 +25,7 @@ const products = [
     title: "Caja Romántica",
     description: "Lujosa caja cuadrada con acabados dorados que revela una selección exclusiva de chocolates, y sorpresas románticas. Un detalle inolvidable.",
     image: "/products/caja-sanvalentin.png",
-    price: "$12.000",
+    price: "$13.500",
     tags: ["Edición Limitada", "Enamorados"],
   },
 ]
@@ -126,14 +126,14 @@ export function News() {
               onMouseLeave={handleCardMouseLeave}
             >
               {/* Product Image */}
-              <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl m-4">
                 <Image
                   src={product.image || "/placeholder.svg"}
                   alt={product.title}
                   fill
-                  className="object-contain group-hover:scale-110 transition-transform duration-700"
+                  className="object-contain group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent" />
+                <div className="absolute inset-0 dark:bg-gradient-to-t dark:from-card/90 dark:via-transparent dark:to-transparent" />
                 <div className="absolute top-4 right-4 flex gap-2">
                   {product.tags.map((tag) => (
                     <Badge key={tag} className="bg-red-500 text-white border-none">
@@ -142,12 +142,12 @@ export function News() {
                     </Badge>
                   ))}
                 </div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="text-3xl font-bold text-foreground">{product.price}</span>
-                </div>
               </div>
 
               <CardContent className="p-6">
+                <div className="mb-3">
+                  <span className="text-3xl font-bold text-foreground">{product.price}</span>
+                </div>
                 {/* Content */}
                 <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-red-400 transition-colors">
                   {product.title}

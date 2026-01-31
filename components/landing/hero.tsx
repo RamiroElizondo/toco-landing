@@ -135,14 +135,22 @@ export function Hero() {
             </div>
           ))}
         </div>
-        </div>
-        </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
+        {/* Scroll indicator */}
+        <div className="mt-6 flex justify-center lg:justify-start">
+          <div className="scroll-hand-wrap relative h-20 w-16">
+            <span className="scroll-hand-trail" aria-hidden="true" />
+            <Image
+              src="/icons/tocoMano.svg"
+              alt="Desliza hacia arriba"
+              width={64}
+              height={80}
+              className="scroll-hand-icon"
+              priority
+            />
+          </div>
+        </div>
+          </div>
         </div>
       </div>
     </section>

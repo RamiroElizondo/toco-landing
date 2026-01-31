@@ -23,12 +23,7 @@ const features = [
     description: "Nuestros asistentes virtuales te guían por la tienda y responden tus preguntas al instante.",
     available: true,
   },
-  {
-    icon: Smartphone,
-    title: "App Conectada",
-    description: "Sincroniza tu experiencia con nuestra app y continúa comprando desde donde estés.",
-    available: false,
-  },
+  
 ]
 
 export function Features() {
