@@ -42,17 +42,17 @@ export function Hero() {
                       </div>
                       
                       {/* SNACKS */}
-                      <div className="bg-[#FFC107] rounded-3xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                      <div className="bg-[#FFC107] rounded-3xl flex items-center justify-center text-gray-900 font-bold text-xl shadow-lg">
                         SNACKS
                       </div>
                       
                       {/* GALLETAS */}
-                      <div className="bg-[#FFB74D] rounded-3xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                      <div className="bg-[#FFB74D] rounded-3xl flex items-center justify-center text-gray-900 font-bold text-xl shadow-lg">
                         GALLETAS
                       </div>
                       
                       {/* SIN TACC */}
-                      <div className="bg-[#4CAF50] rounded-3xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                      <div className="bg-[#4CAF50] rounded-3xl flex items-center justify-center text-gray-900 font-bold text-xl shadow-lg">
                         SIN TACC
                       </div>
                       

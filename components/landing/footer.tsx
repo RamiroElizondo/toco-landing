@@ -121,7 +121,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="TOCO"
               width={120}
               height={48}
@@ -156,7 +156,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Links - Empresa */}
+          {/* Links - Empresa 
           <div>
             <h4 className="font-semibold text-foreground mb-4">Empresa</h4>
             <ul className="space-y-3">
@@ -172,7 +172,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
+            */}
           {/* Links - Soporte 
           <div>
             <h4 className="font-semibold text-foreground mb-4">Soporte</h4>
@@ -211,7 +211,7 @@ export function Footer() {
           {/* Big logo right */}
           <div className="col-span-2 md:col-span-2 lg:col-span-3 flex justify-center lg:justify-end items-center">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="TOCO"
               width={360}
               height={144}

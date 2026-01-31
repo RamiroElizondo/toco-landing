@@ -11,7 +11,6 @@ import { Menu, X } from "lucide-react"
 const navLinks = [
   { href: "#novedades", label: "Novedades" },
   { href: "#como-funciona", label: "Cómo Funciona" },
-  { href: "#ofertas", label: "Ofertas" },
   { href: "#ubicacion", label: "Ubicación" },
 ]
 
@@ -40,7 +39,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="TOCO"
               width={100}
               height={40}
@@ -85,7 +84,7 @@ export function Navbar() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between mb-8">
                   <Image
-                    src="/logo.png"
+                    src="/logo.webp"
                     alt="TOCO"
                     width={100}
                     height={40}

@@ -61,7 +61,7 @@ export function Location() {
             Visítanos en San Juan
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Estamos ubicados en el corazón de Santurce, listos para ofrecerte una experiencia única.
+            Estamos ubicados en el corazón de San Juan, listos para ofrecerte una experiencia única.
           </p>
         </div>
 
