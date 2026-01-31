@@ -15,17 +15,17 @@ const products = [
   {
     id: 1,
     title: "Cilindro San Valentín",
-    description: "Un elegante cilindro de terciopelo rojo con lazo dorado, repleto de chocolates premium y rosas frescas. El regalo perfecto para sorprender a esa persona especial.",
+    description: "Un elegante cilindro rojo con lazo dorado, repleto de chocolates. El regalo perfecto para sorprender a esa persona especial.",
     image: "/products/cilindro-sanvalentin.png",
-    price: "$49.99",
+    price: "$16.000",
     tags: ["Edición Limitada", "Más vendido"],
   },
   {
     id: 2,
-    title: "Caja Romántica Premium",
-    description: "Lujosa caja cuadrada con acabados dorados que revela una selección exclusiva de chocolates artesanales, pétalos de rosa y sorpresas románticas. Un detalle inolvidable.",
+    title: "Caja Romántica",
+    description: "Lujosa caja cuadrada con acabados dorados que revela una selección exclusiva de chocolates, y sorpresas románticas. Un detalle inolvidable.",
     image: "/products/caja-sanvalentin.png",
-    price: "$69.99",
+    price: "$12.000",
     tags: ["Edición Limitada", "Enamorados"],
   },
 ]
