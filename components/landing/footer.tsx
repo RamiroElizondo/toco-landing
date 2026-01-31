@@ -45,7 +45,7 @@ export function Footer() {
       const formData = new FormData()
       formData.append("q3_email", email)
 
-      await fetch("https://submit.jotform.com/submit/260287217608056", {
+      await fetch("https://form.jotform.com/260298390042052", {
         method: "POST",
         body: formData,
       })
