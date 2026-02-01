@@ -17,7 +17,7 @@ const products = [
     title: "Cilindro San Valentín",
     description: "Un elegante cilindro rojo con lazo dorado, repleto de chocolates. El regalo perfecto para sorprender a esa persona especial.",
     image: "/products/cilindro-sanvalentin.webp",
-    price: "$16.500",
+    price: "$17.000",
     tags: ["Edición Limitada", "Más vendido"],
   },
   {
