@@ -11,11 +11,10 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: '--font-space
 export const metadata: Metadata = {
   title: 'TOCO | La Primera Tienda Interactiva de San Juan',
   description: 'Descubre TOCO, la experiencia de compra del futuro. La primera tienda interactiva en San Juan donde la tecnología y la innovación transforman tu forma de comprar.',
-  generator: 'v0.app',
   keywords: ['tienda interactiva', 'San Juan', 'TOCO', 'innovación', 'tecnología', 'retail del futuro'],
   icons: {
-    icon: '/logo.png',
-    apple: '/logo.png',
+    icon: '/icons/logo.ico',
+    apple: '/icons/logo.ico',
   },
   openGraph: {
     title: 'TOCO | La Primera Tienda Interactiva de San Juan',

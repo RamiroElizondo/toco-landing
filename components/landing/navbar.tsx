@@ -41,9 +41,9 @@ export function Navbar() {
             <Image
               src="/logo.webp"
               alt="TOCO"
-              width={100}
-              height={40}
-              className="h-8 md:h-10 w-auto"
+              width={140}
+              height={56}
+              className="h-10 md:h-14 w-auto"
             />
           </Link>
 
@@ -86,9 +86,9 @@ export function Navbar() {
                   <Image
                     src="/logo.webp"
                     alt="TOCO"
-                    width={100}
-                    height={40}
-                    className="h-8 w-auto"
+                    width={120}
+                    height={48}
+                    className="h-9 w-auto"
                   />
                   <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                     <X className="h-6 w-6" />
